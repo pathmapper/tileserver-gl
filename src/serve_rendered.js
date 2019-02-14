@@ -146,6 +146,7 @@ module.exports = function(options, repo, params, id, publicUrl, dataResolver) {
     var createRenderer = function(ratio, createCallback) {
       var renderer = new mbgl.Map({
         ratio: ratio,
+        mode: "tile",
         request: function(req, callback) {
           var protocol = req.url.split(':')[0];
           //console.log('Handling request:', req);
